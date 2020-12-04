@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <ol id="items"></ol> 
+</body>
+<script>
+
+function renderItems(data) {
+    const itemLinst = data.map(item => `<li>${item.name} : ${item.price}</li>`).join("");
+    document.querySelector("#items").innerHTML = itemLinst;
+}
+const data = fetch('http://localhost:5000/items')
+  .then(response => response.json())
+  .then(data => renderItems(data));
+
+</script>
+</html>
