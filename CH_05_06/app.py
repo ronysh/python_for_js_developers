@@ -14,13 +14,16 @@ data = [
     {"id": 5, "name": "whole canned tomatoes", "price": 4.50},
 ]
 
-@app.route('/')
-def hello(name=None):
-    return render_template('index.html')
 
-@app.route('/items')
+@app.route("/")
+def hello(name=None):
+    return render_template("index.html")
+
+
+@app.route("/items")
 def items():
     less_than_three = [item for item in data if item["price"] < 3]
     return jsonify(less_than_three)
+
 
 app.run(debug=True)

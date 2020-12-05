@@ -8,4 +8,3 @@ elif number < 1_000_001:
     print("Good attitude.")
 else:
     print("Don't be greedy.")
-    

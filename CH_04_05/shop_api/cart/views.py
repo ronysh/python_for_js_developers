@@ -33,15 +33,14 @@ class UserMixin:
 
 
 class ItemListView(APIView, ItemsMixin):
-
     def get(self, request, format=None):
         return Response(self.data, status=status.HTTP_200_OK)
 
 
 class ItemDetailView(APIView, ItemsMixin):
-
     def get(self, request, pk, format=None):
         from pprint import pprint
+
         if pk <= len(self.data) and pk > 0:
             return Response(self.data[pk - 1], status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)

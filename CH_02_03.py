@@ -3,12 +3,16 @@
 * tuples are leaner yet not mutable
 """
 
-names = ['Ronnie', 'Mona', 'Jack']
+names = ["Ronnie", "Mona", "Jack"]
 
-names[2] = 'Fred'
+names[2] = "Fred"
 print(names)
 
-names_tuple = ('Ronnie', 'Mona', 'Jack',)
+names_tuple = (
+    "Ronnie",
+    "Mona",
+    "Jack",
+)
 
 # this will result in an error
-names_tuple[2] = 'Fred'
+names_tuple[2] = "Fred"

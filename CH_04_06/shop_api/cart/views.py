@@ -29,10 +29,12 @@ class UserMixin:
             {"id": 5, "name": "Mona", "store_credits": Decimal("18")},
         ]
 
+
 class ListMixin:
     def get(self, request, format=None):
         data = self.get_data()
         return Response(data, status=status.HTTP_200_OK)
+
 
 class DetailMixin:
     def get(self, request, pk, format=None):
@@ -41,14 +43,18 @@ class DetailMixin:
             return Response(data[pk - 1], status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)
 
+
 class ItemListView(APIView, ListMixin, ItemsMixin):
     pass
+
 
 class ItemDetailView(APIView, DetailMixin, ItemsMixin):
     pass
 
+
 class UserListView(APIView, UserMixin, ListMixin):
     pass
+
 
 class UserDetailView(APIView, UserMixin, DetailMixin):
     pass

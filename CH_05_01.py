@@ -6,8 +6,9 @@ def make_range(num):
         yield count
         count += 1
 
+
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
 
 for num, letter in zip(numbers, letters):
     print(num, letter)

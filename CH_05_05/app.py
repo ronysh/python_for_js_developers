@@ -14,12 +14,15 @@ data = [
     {"id": 5, "name": "whole canned tomatoes", "price": 4.50},
 ]
 
-@app.route('/')
-def hello(name=None):
-    return render_template('index.html')
 
-@app.route('/items')
+@app.route("/")
+def hello(name=None):
+    return render_template("index.html")
+
+
+@app.route("/items")
 def items():
     return jsonify(data)
+
 
 app.run(debug=True)

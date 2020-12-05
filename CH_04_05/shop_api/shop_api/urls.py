@@ -18,8 +18,8 @@ from django.urls import path
 from cart import views
 
 urlpatterns = [
-    path('items/', views.ItemListView.as_view()),
-    path('items/<int:pk>/', views.ItemDetailView.as_view()),
-    path('users/', views.UserListView.as_view()),
-    path('users/<int:pk>/', views.UserDetailView.as_view()),
+    path("items/", views.ItemListView.as_view()),
+    path("items/<int:pk>/", views.ItemDetailView.as_view()),
+    path("users/", views.UserListView.as_view()),
+    path("users/<int:pk>/", views.UserDetailView.as_view()),
 ]
