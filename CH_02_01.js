@@ -13,4 +13,4 @@ class Pet {
 
 const mona = new Pet("Mona", 6);
 
-element.text(sayHi(myName));
+console.log(sayHi(myName));

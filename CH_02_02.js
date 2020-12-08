@@ -1,4 +1,6 @@
-const number = 1;
+const wholeNumber = 1;
 const nonWholeNumber = 0.5;
-const output = `${typeof number} ${typeof nonWholeNumber}`;
-element.text(output);
+const unexpected = 0.2 + 0.1;
+console.log(`${typeof wholeNumber} ${typeof nonWholeNumber}`);
+console.log(`Since when does 0.2 + 0.1 = ${unexpected}`)
+
