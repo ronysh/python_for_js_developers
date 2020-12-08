@@ -4,11 +4,11 @@ greet = f"Hi {NAME}!"
 
 formal_greet = greet.replace("Hi", "Greetings")
 
-string_contains_name = NAME in greet # True
+string_contains_name = NAME in greet  # True
 
-string_starts_with_hi = greet.startswith("Hi") # True
+string_starts_with_hi = greet.startswith("Hi")  # True
 
-string_ends_with_hi = greet.endswith("Hi") # False
+string_ends_with_hi = greet.endswith("Hi")  # False
 
 print("greet                 :", greet)
 print("formal_greet          :", formal_greet)
