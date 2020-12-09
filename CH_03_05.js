@@ -10,3 +10,4 @@ friends.forEach((friend) => {
     console.log(`Hey ${friend.name}!`);
   }
 });
+
