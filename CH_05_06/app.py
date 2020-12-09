@@ -6,24 +6,21 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-data = [
-    {"id": 1, "name": "olive oil", "price": 8.99},
-    {"id": 2, "name": "flour", "price": 3.50},
-    {"id": 3, "name": "salt", "price": 2.50},
-    {"id": 4, "name": "yeast", "price": 1.50},
-    {"id": 5, "name": "whole canned tomatoes", "price": 4.50},
-]
+with open('laureate.json') as f:
+    nobel_prize_laureates = json.load(f)["laureates"]
 
+
+first_name_with_a = [laureate for laureate in nobel_prize_laureates if 'a' in laureate["firstname"].lower()]
 
 @app.route("/")
 def hello(name=None):
     return render_template("index.html")
 
-
 @app.route("/items")
 def items():
-    less_than_three = [item for item in data if item["price"] < 3]
-    return jsonify(less_than_three)
+    return jsonify(first_name_with_a)
+
+app.run(debug=True)
 
 
 app.run(debug=True)
