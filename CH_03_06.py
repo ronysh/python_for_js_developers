@@ -1,4 +1,13 @@
-friends = ["Graham", "John", "Terry", "Eric", "Terry", "Michael"]
+FRIENDS = [
+  {"name": "Graham"}, 
+  {"name": "John"}, 
+  {"name": "Terry"}, 
+  {"name": "Eric"}, 
+  {"name": "Terry"}, 
+  {"name": "Michael"}
+]
 
-for friend in friends:
-    print(f"Hey {friend}!")
+
+for friend in FRIENDS:
+    if "a" in friend["name"]:
+        print(f"Hey {friend['name']}!")

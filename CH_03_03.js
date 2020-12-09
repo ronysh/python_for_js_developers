@@ -17,10 +17,6 @@ console.log("================");
 
 arr.forEach(item => console.log(item + " from forEach"));
 
-for (const i of arr) {
-  console.log(i + " from for/in loop");
-}
-
 console.log("================");
 
 for (const i of arr) {

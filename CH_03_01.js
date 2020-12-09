@@ -1,5 +1,6 @@
+
 const addNumbers = (a, b) => {
-  const result = a + b; // demonstrating scope
+  const result = a + b;
   return result;
 };
 

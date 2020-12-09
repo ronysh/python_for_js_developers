@@ -1,5 +1,12 @@
-const friends = ["Graham", "John", "Terry", "Eric", "Terry", "Michael"]; // extra credit: why did I choose these names ;)
+const friends = [
+  {name: "Graham"}, // use a string for key "name" in Python
+  {name: "John"}, {name: "Terry"}, 
+  {name: "Eric"}, {name: "Terry"}, 
+  {name: "Michael"}
+]; // extra credit: why did I choose these names ;)
 
 friends.forEach((friend) => {
-  console.log(`Hey ${friend}!`);
+  if (friend.name.includes("a")) {
+    console.log(`Hey ${friend.name}!`);
+  }
 });

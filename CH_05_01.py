@@ -15,3 +15,9 @@ for num, letter in zip(numbers, letters):
 
 for i, letter in enumerate(letters):
     print(i, letter)
+
+for letter in reversed(letters):
+    print(letter)
+
+for letter in sorted([2, 3, 9, 1]):
+    print(letter)
