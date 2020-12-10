@@ -1,18 +1,14 @@
 import time
 
-
-class ShoppingCart:
+class Soup:
     def __init__(self):
-        self.data = []
+        self.veggies = ["tomatoes", "onions", "carrots", "brocholi"]
+    
+    def print_veggies(self):
+        for veggie in self.veggies:
+            print(veggie)
 
-    def add_item(self, item):
-        self.data.append(item)
-
-
-class ClassRoom:
-    def __init__(self):
-        self.data = []
-
+Soup().print_veggies()
 
 class VeggieMixin:
     veggies = ["tomatoes", "onions", "carrots", "brocholi"]
@@ -21,7 +17,7 @@ class VeggieMixin:
 class SoupMixin:
     temprature = "199.4°F"
     water_percentage = 50
-    cooking_time = 5
+    cooking_time = 3
 
 
 class SaladMixin:

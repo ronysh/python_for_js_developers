@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.shortcuts import render
 
 from django.http import Http404
@@ -5,7 +7,6 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
-from decimal import Decimal
 
 
 class ItemsMixin:
@@ -39,9 +40,7 @@ class ItemListView(APIView, ItemsMixin):
 
 class ItemDetailView(APIView, ItemsMixin):
     def get(self, request, pk, format=None):
-        from pprint import pprint
-
-        if pk <= len(self.data) and pk > 0:
+        if 0 < pk <= len(self.data):
             return Response(self.data[pk - 1], status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)
 

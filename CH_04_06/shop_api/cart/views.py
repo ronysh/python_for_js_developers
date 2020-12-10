@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.shortcuts import render
 
 from django.http import Http404
@@ -5,11 +7,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import action
-from decimal import Decimal
 
 
 class ItemsMixin:
-    def get_data(self):
+
+    @property
+    def data(self):
         return [
             {"id": 1, "name": "olive oil", "price": Decimal("8.99")},
             {"id": 2, "name": "flour", "price": Decimal("3.50")},
@@ -20,7 +23,9 @@ class ItemsMixin:
 
 
 class UserMixin:
-    def get_data(self):
+
+    @property
+    def data(self):
         return [
             {"id": 1, "name": "Bill", "store_credits": Decimal("10")},
             {"id": 2, "name": "Bob", "store_credits": Decimal("60")},
@@ -32,15 +37,13 @@ class UserMixin:
 
 class ListMixin:
     def get(self, request, format=None):
-        data = self.get_data()
-        return Response(data, status=status.HTTP_200_OK)
+        return Response(self.data, status=status.HTTP_200_OK)
 
 
 class DetailMixin:
     def get(self, request, pk, format=None):
-        data = self.get_data()
-        if pk <= len(data) and pk > 0:
-            return Response(data[pk - 1], status=status.HTTP_200_OK)
+        if 0 < pk <= len(self.data):
+            return Response(self.data[pk - 1], status=status.HTTP_200_OK)
         return Response(status=status.HTTP_404_NOT_FOUND)
 
 
