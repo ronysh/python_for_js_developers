@@ -3,7 +3,6 @@ FRIENDS = [
   {"name": "John"}, 
   {"name": "Terry"}, 
   {"name": "Eric"}, 
-  {"name": "Terry"}, 
   {"name": "Michael"}
 ] # Members of Monty Python comedy troupe!
 

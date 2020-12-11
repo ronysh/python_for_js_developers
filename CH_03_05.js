@@ -1,7 +1,8 @@
 const friends = [
   {name: "Graham"}, // use a string for key "name" in Python
-  {name: "John"}, {name: "Terry"}, 
-  {name: "Eric"}, {name: "Terry"}, 
+  {name: "John"}, 
+  {name: "Eric"}, 
+  {name: "Terry"}, 
   {name: "Michael"}
 ]; // extra credit: why did I choose these names ;)
 
