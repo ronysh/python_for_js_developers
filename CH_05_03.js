@@ -6,11 +6,11 @@ const friends = [
     {name: "Michael"}
   ];
   
-  const nameStrings = friends.map(friend => friend.name);
-  const namesWithH = nameStrings.filter(name => name.includes("e"));
+const nameStrings = friends.map(friend => friend.name);
+const namesWithH = nameStrings.filter(name => name.includes("h"));
 
- console.log("=====nameStrings=====");
+console.log("=====nameStrings=====");
 console.log(nameStrings);
 
- console.log("=====namesWithH=====");
- console.log(namesWithH);
+console.log("=====namesWithH=====");
+console.log(namesWithH);

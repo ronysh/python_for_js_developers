@@ -8,11 +8,11 @@ FRIENDS = [
 
 NAME_STRINGS = [friend["name"] for friend in FRIENDS]
 
-NAMES_WITH_E = [string for string in NAME_STRINGS if "e" in string]
+NAMES_WITH_H = [string for string in NAME_STRINGS if "h" in string]
 
 print("          =====NAME_STRINGS=====")
 print(NAME_STRINGS)
 
 
-print("          =====NAMES_WITH_E=====")
-print(NAMES_WITH_E)
+print("          =====NAMES_WITH_H=====")
+print(NAMES_WITH_H)
