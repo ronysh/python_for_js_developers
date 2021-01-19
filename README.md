@@ -38,3 +38,15 @@ These exersice files are to be used in conjuction with the course "Python for Ja
    ```bash
    venv\Scripts\activate
    ```
+ 
+ 
+# Running a single exercise file.
+> :warning: *Make sure that you have set up your environment according to the instructions above*
+1. Javascript
+   ```bash
+   node CH_02_01.js
+   ```
+1. Python
+   ```bash
+   python CH_02_01.py
+   ```
