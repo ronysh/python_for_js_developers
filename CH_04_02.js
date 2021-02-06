@@ -1,5 +1,5 @@
 const literalSoup = {
-  vegies: ["tomatoes", "onions", "carrots", "brocholi"],
+  vegies: ["tomatoes", "onions", "carrots", "broccoli"],
   coock () {
       setTimeout(() => {
         console.log("literally ready");
@@ -8,7 +8,7 @@ const literalSoup = {
 };
 
 function SoupConstructor() {
-  this.vegies = ["tomatoes", "onions", "carrots", "brocholi"];
+  this.vegies = ["tomatoes", "onions", "carrots", "broccoli"];
   this.coock = function() {
         setTimeout(() => {
         console.log("constructed ready");
@@ -18,7 +18,7 @@ function SoupConstructor() {
 
 class SoupClass {
   constructor() {
-    this.vegies = ["tomatoes", "onions", "carrots", "brocholi"];
+    this.vegies = ["tomatoes", "onions", "carrots", "broccoli"];
   }
   coock () {
     setTimeout(() => {
